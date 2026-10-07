@@ -3,63 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>PhiPhi</title>
 
+  <meta
+    name="description"
+    content="PhiPhi is building personal AI with more control."
+  />
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
       color: #111111;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Helvetica,
+        Arial,
+        sans-serif;
     }
 
     main {
-      max-width: 760px;
+      min-height: 100vh;
+      max-width: 1180px;
       margin: 0 auto;
-      padding: 80px 24px;
+      padding: 44px 48px 36px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 650;
+      letter-spacing: -0.6px;
+    }
+
+    .contact {
+      font-size: 14px;
+      color: #777;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact:hover {
+      color: #111;
+    }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 100px 0;
+      max-width: 850px;
     }
 
     h1 {
-      font-size: 48px;
-      margin: 0 0 24px;
-      letter-spacing: -1.5px;
+      margin: 0;
+      font-size: clamp(56px, 8.5vw, 104px);
+      line-height: 0.95;
+      letter-spacing: -5px;
+      font-weight: 620;
     }
 
-    p {
-      font-size: 20px;
-      line-height: 1.6;
-      color: #444;
-      max-width: 650px;
+    .subtitle {
+      margin-top: 30px;
+      max-width: 600px;
+      font-size: 21px;
+      line-height: 1.55;
+      color: #666666;
+      letter-spacing: -0.2px;
     }
 
-    .small {
-      margin-top: 48px;
-      font-size: 15px;
+    .status {
+      margin-top: 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      font-size: 13px;
       color: #777;
     }
 
-    a {
-      color: #111;
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #111;
+    }
+
+    footer {
+      padding-top: 24px;
+      border-top: 1px solid #eeeeee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 13px;
+      color: #888888;
+    }
+
+    footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #111111;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        padding: 28px 24px 24px;
+      }
+
+      .contact {
+        display: none;
+      }
+
+      .hero {
+        padding: 80px 0;
+      }
+
+      h1 {
+        letter-spacing: -3px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
-    <h1>PhiPhi</h1>
+    <nav>
+      <div class="brand">PhiPhi</div>
+      <a class="contact" href="mailto:admin@phiphi.online">
+        admin@phiphi.online
+      </a>
+    </nav>
 
-    <p>
-      We are building tools for more useful and thoughtful interactions with AI.
-    </p>
+    <section class="hero">
+      <h1>
+        Personal AI,<br />
+        with more control.
+      </h1>
 
-    <p>
-      Currently exploring personalization, user control, and AI-assisted workflows.
-    </p>
+      <div class="subtitle">
+        Building better ways for AI to understand context,
+        adapt to people, and stay aligned with what they want.
+      </div>
 
-    <p class="small">
-      Contact:
-      <a href="mailto:cheng@phiphi.online">cheng@phiphi.online</a>
-    </p>
+      <div class="status">
+        <span class="dot"></span>
+        Early stage
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 PhiPhi</span>
+
+      <a href="mailto:admin@phiphi.online">
+        admin@phiphi.online
+      </a>
+    </footer>
   </main>
 </body>
 </html>
